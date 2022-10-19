@@ -1,3 +1,4 @@
 massive/model-output/*
 massive/mt5-base/*
 massive/output_dataset/.train/dataset.arrow
+**/**/.train/dataset.arrow
