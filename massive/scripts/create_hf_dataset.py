@@ -1,12 +1,9 @@
 """
 Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
-
 Licensed under the Apache License, Version 2.0 (the "License").
 You may not use this file except in compliance with the License.
 You may obtain a copy of the License at
-
   http://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -25,7 +22,6 @@ class DatasetCreator:
     """
     This class if for creating four dataset splits, in the Huggingface Datasets Apache Arrow format,
     from the MASSIVE dataset. Each dataset split has the following columns:
-
         "id",
         "locale",
         "utt",
@@ -35,7 +31,6 @@ class DatasetCreator:
         "intent_num",
         "slots_str",
         "slots_num"
-
     Methods
     -------
     create_datasets(data_path): Creates the dataset splits using the data_path of the MASSIVE set
@@ -43,7 +38,6 @@ class DatasetCreator:
     investigate_datasets(): Prints out the seventh example from each dataset split as gut check
     save_label_dicts(prefix): Saves the mappings to the integer versions of the labels
     save_datasets(out_prefix): Saves the datasets to out_prefix
-
     """
 
     def __init__(self):
@@ -57,7 +51,6 @@ class DatasetCreator:
     def create_datasets(self, data_paths, char_split_locales=None):
         """
         Loads the datasets, parses, and appends to the HF Dataset
-
         :param data_path: The path(s) to the MASSIVE dataset
         :type data_path: str or list
         :param char_split_locales: Locales that should be split by character
@@ -256,18 +249,18 @@ class DatasetCreator:
         self.train = self.train.map(create_numeric_labels) if self.train else None
         self.dev = self.dev.map(create_numeric_labels) if self.dev else None
         self.test = self.test.map(create_numeric_labels) if self.test else None
-        if self.hidden_eval and self.hidden_eval[0]['intent_str']:
+        if self.hidden_eval is not None and self.hidden_eval[0]['intent_str']:
             self.hidden_eval = self.hidden_eval.map(create_numeric_labels)
 
     def save_label_dicts(self, output_prefix):
         """
         Save the dictionaries mapping numeric labels to text-based labels
-
         :param output_prefix: The location and file prefix for saving the dictionaries
         :type output_prefix: str
         """
 
-        with open(output_prefix+'.intents', "w") as i, open(output_prefix+'.slots', "w") as s:
+        with open(os.path.join(output_prefix, '.intents'), "w") as i,\
+             open(os.path.join(output_prefix, '.slots'), "w") as s:
             # swap the keys and vals to use the index as key and slot as val
             json.dump({v: k for k, v in self.intent_dict.items()}, i)
             json.dump({v: k for k, v in self.slot_dict.items()}, s)
@@ -275,7 +268,6 @@ class DatasetCreator:
     def save_datasets(self, output_prefix):
         """
         Save the dataset splits
-
         :param output_prefix: The location and file prefix for saving the dataset splits
         :type output_prefix: str
         """
@@ -286,7 +278,7 @@ class DatasetCreator:
             (self.hidden_eval, '.mmnlu22')
         ]:
             if ds:
-                ds.save_to_disk(output_prefix+suf)
+                ds.save_to_disk(os.path.join(output_prefix, suf))
 
 
 def isascii(s):
