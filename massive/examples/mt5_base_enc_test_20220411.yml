@@ -1,0 +1,39 @@
+run_name: &run_name mt5_base_ic_sf_optimized_20220411_test
+max_length: &max_length 512
+
+model:
+  type: mt5 intent classification slot filling encoder only
+  checkpoint: /home/gurnoor/massive/massive/model-output/checkpoint-17200
+
+tokenizer:
+  type: mt5
+  tok_args:
+    vocab_file: /home/gurnoor/massive/massive/model-output/checkpoint-17200/spiece.model
+    max_len: *max_length
+
+collator:
+  type: massive intent class slot fill
+  args:
+    max_length: *max_length
+    padding: longest
+
+test:
+  test_dataset:  /home/gurnoor/massive/massive/output_dataset/.test
+  intent_labels: /home/gurnoor/massive/massive/output_dataset/.intents
+  slot_labels: /home/gurnoor/massive/massive/output_dataset/.slots
+  massive_path: /home/gurnoor/massive/massive
+  predictions_file: /home/gurnoor/massive/massive/test_out/localization-results/predictions.json
+  slot_labels_ignore:
+    - Other
+  eval_metrics: all
+  trainer_args:
+    output_dir: /home/gurnoor/massive/massive/test_out/localization-results
+    per_device_eval_batch_size: 64
+    eval_accumulation_steps: 4
+    remove_unused_columns: false
+    label_names:
+      - intent_num
+      - slots_num
+    logging_strategy: no
+    locale_eval_strategy: all only
+    disable_tqdm: false
