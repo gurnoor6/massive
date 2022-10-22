@@ -1,0 +1,12 @@
+{ 'test_all_ex_match_acc': 0.5953026196928636,
+  'test_all_ex_match_acc_stderr': 0.008517255112541602,
+  'test_all_intent_acc': 0.8744354110207768,
+  'test_all_intent_acc_stderr': 0.005749936123486943,
+  'test_all_loss': 3.2432308197021484,
+  'test_all_runtime': 12.4701,
+  'test_all_samples_per_second': 266.318,
+  'test_all_slot_micro_f1': 0.7529741077676697,
+  'test_all_slot_micro_f1_stderr': 0.000974318201837425,
+  'test_all_steps_per_second': 1.042,
+  'training_epoch': None,
+  'training_global_step': 0}

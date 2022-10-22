@@ -10,6 +10,7 @@ DATA_DIR = "./data"
 LOCALIZATION_DIR_PATH = "./localization_data"
 UNCHANGED_DIR_PATH = "./unchanged_data"
 TRANSLATION_DIR_PATH = "./translation_data"
+FILES = ["hi-IN.jsonl", "kn-IN.jsonl", "ml-IN.jsonl", "ta-IN.jsonl", "te-IN.jsonl"]
 
 
 def translate(english_word, lang=None):
@@ -35,7 +36,7 @@ for file in os.listdir(LOCALIZATION_DIR_PATH):
     with jsonlines.open(filepath) as fh:
         for row in fh:
             # skip for english dataset
-            if "slot_method" not in row:
+            if row["partition"] != "test" or "slot_method" not in row:
                 continue
 
             # get slots from annotated utterance in the given locale

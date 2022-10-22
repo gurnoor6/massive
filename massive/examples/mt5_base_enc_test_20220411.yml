@@ -18,16 +18,16 @@ collator:
     padding: longest
 
 test:
-  test_dataset:  /home/gurnoor/massive/massive/localization_ds/.test
+  test_dataset:  /home/gurnoor/massive/massive/IN_ds/unchanged/.test
   intent_labels: /home/gurnoor/massive/massive/prepared-orig-dataset/.intents
   slot_labels: /home/gurnoor/massive/massive/prepared-orig-dataset/.slots
   massive_path: /home/gurnoor/massive/massive
-  predictions_file: /home/gurnoor/massive/massive/test_out/localization-results/predictions.json
+  predictions_file: /home/gurnoor/massive/massive/test_out/unchanged_IN/predictions.json
   slot_labels_ignore:
     - Other
   eval_metrics: all
   trainer_args:
-    output_dir: /home/gurnoor/massive/massive/test_out/localization-results
+    output_dir: /home/gurnoor/massive/massive/test_out/unchanged_IN/
     per_device_eval_batch_size: 64
     eval_accumulation_steps: 4
     remove_unused_columns: false
