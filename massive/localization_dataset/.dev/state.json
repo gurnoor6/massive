@@ -1,0 +1,24 @@
+{
+  "_data_files": [
+    {
+      "filename": "dataset.arrow"
+    }
+  ],
+  "_fingerprint": "b1e1a801f78ab005",
+  "_format_columns": [
+    "annot_utt",
+    "domain",
+    "id",
+    "intent_num",
+    "intent_str",
+    "locale",
+    "slots_num",
+    "slots_str",
+    "utt"
+  ],
+  "_format_kwargs": {},
+  "_format_type": null,
+  "_indexes": {},
+  "_output_all_columns": false,
+  "_split": null
+}

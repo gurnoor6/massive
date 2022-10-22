@@ -16,8 +16,10 @@ for file in os.listdir(DATA_DIR):
     localization_fh = jsonlines.open(localization_file_path, "w")
     with jsonlines.open(filepath) as fh:
         for row in fh:
+            if row["partition"] != "test":
+                localization_fh.write(row)
             # slot_method will not exist in english dataset
-            if "slot_method" in row:
+            elif row["partition"] == "test" and "slot_method" in row:
                 # filter all localization samples and write them to a file
                 # if any of the slots used the localization methos
                 # classify the sentence as a localization sample
