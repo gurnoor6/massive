@@ -5,6 +5,9 @@ Module to convert localization samples into corresponding unchanged versions
 import os
 import re
 import jsonlines
+from indicnlp import common
+from indicnlp import loader
+from indicnlp.transliterate.unicode_transliterate import ItransTransliterator
 
 DATA_DIR = "./data"
 LOCALIZATION_DIR_PATH = "./localization_data"
@@ -12,9 +15,18 @@ UNCHANGED_DIR_PATH = "./unchanged_data"
 TRANSLATION_DIR_PATH = "./translation_data"
 FILES = ["hi-IN.jsonl", "kn-IN.jsonl", "ml-IN.jsonl", "ta-IN.jsonl", "te-IN.jsonl"]
 
+# indic trans library paths
+INDIC_NLP_RESOURCES="/home/gurnoor/massive/massive/indicTrans/indic_nlp_resources"
+INDIC_NLP_LIB_HOME="/home/gurnoor/massive/massive/indicTrans/indic_nlp_library"
+
+# configure indicTrans
+common.set_resources_path(INDIC_NLP_RESOURCES)
+loader.load()
 
 def translate(english_word, lang=None):
-    return english_word
+    # find documentation for this here
+    # https://nbviewer.org/url/anoopkunchukuttan.github.io/indic_nlp_library/doc/indic_nlp_examples.ipynb
+    return ItransTransliterator.from_itrans(english_word, lang)
 
 
 # establish id to slots mapping for english dataset
@@ -62,7 +74,7 @@ for file in os.listdir(LOCALIZATION_DIR_PATH):
                 try:
                     filler_locale = locale_slots[localization_slot]
                     filler_english = english_slots[localization_slot]
-                    filler_translated = translate(filler_english)
+                    filler_translated = translate(filler_english, file.split("-")[0])
                 except:
                     print(locale_slots, row["annot_utt"], row["id"])
 
