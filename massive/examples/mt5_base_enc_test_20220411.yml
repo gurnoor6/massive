@@ -3,12 +3,12 @@ max_length: &max_length 512
 
 model:
   type: mt5 intent classification slot filling encoder only
-  checkpoint: /home/gurnoor/massive/massive/model-output/checkpoint-17205
+  checkpoint: /home/gurnoor/massive/massive/models/baseline/checkpoint-17205
 
 tokenizer:
   type: mt5
   tok_args:
-    vocab_file: /home/gurnoor/massive/massive/model-output/checkpoint-17205/spiece.model
+    vocab_file: /home/gurnoor/massive/massive/models/baseline/checkpoint-17205/spiece.model
     max_len: *max_length
 
 collator:

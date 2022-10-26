@@ -53,15 +53,15 @@ collator:
     padding: longest
 
 train_val:
-  train_dataset: /home/gurnoor/massive/massive/prepared-orig-dataset/.train
-  dev_dataset: /home/gurnoor/massive/massive/prepared-orig-dataset/.dev
-  intent_labels: /home/gurnoor/massive/massive/prepared-orig-dataset/.intents
-  slot_labels: /home/gurnoor/massive/massive/prepared-orig-dataset/.slots
+  train_dataset: /home/gurnoor/massive/massive/datasets/IN_ds/zeroshot_localization/.train
+  dev_dataset: /home/gurnoor/massive/massive/datasets/IN_ds/zeroshot_localization/.dev
+  intent_labels: /home/gurnoor/massive/massive/datasets/prepared-orig-dataset/.intents
+  slot_labels: /home/gurnoor/massive/massive/datasets/prepared-orig-dataset/.slots
   slot_labels_ignore:
     - Other
   eval_metrics: all
   trainer_args:
-    output_dir: /home/gurnoor/massive/massive/model-output
+    output_dir: /home/gurnoor/massive/massive/models/zeroshot_localization
     evaluation_strategy: epoch
     # eval_steps: 1000
     eval_accumulation_steps: 4
