@@ -99,4 +99,10 @@ for file in os.listdir(LOCALIZATION_DIR_PATH):
             unchanged_fh.write(row_unchanged)
             translation_fh.write(row_translation)
 
+            # if file.startswith("hi"):
+            #     print(f"Original Sentence:", row["utt"])
+            #     print(f"Unchanged Sentence:", row_unchanged["utt"])
+            #     print(f"Transliterated Sentence:", row_translation["utt"])
+
     unchanged_fh.close()
+    translation_fh.close()
