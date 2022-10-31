@@ -1,0 +1,84 @@
+ನಾನು red hot chili peppers ಹಿಮವನ್ನು ಕೇಳಲು ಬಯಸುತ್ತೇನೆ
+ನಾನು [radio_name : red hot] chili peppers ಹಿಮವನ್ನು ಕೇಳಲು ಬಯಸುತ್ತೇನೆ
+ನಾನು [artist_name : red hot chili peppers] [song_name : ಹಿಮವನ್ನು] ಕೇಳಲು ಬಯಸುತ್ತೇನೆ
+
+ದಯವಿಟ್ಟು ಮಧ್ಯಾಹ್ನ haysi ಅಂಜಲಿ ನೊಂದಿಗೆ ಸಭೆಯನ್ನು ನಿಗದಿಪಡಿಸಿ
+ದಯವಿಟ್ಟು [timeofday : ಮಧ್ಯಾಹ್ನ] [person : haysi ಅಂಜಲಿ] ನೊಂದಿಗೆ [event_name : ಸಭೆಯನ್ನು] ನಿಗದಿಪಡಿಸಿ
+ದಯವಿಟ್ಟು [timeofday : ಮಧ್ಯಾಹ್ನ] [place_name : haysi] [person : ಅಂಜಲಿ] ನೊಂದಿಗೆ [event_name : ಸಭೆಯನ್ನು] ನಿಗದಿಪಡಿಸಿ
+
+ಇದೀಗ grand rapids mi ಮೈಯಲ್ಲಿ ಹವಾಮಾನ ಏನು ಮಾಡುತ್ತಿದೆ ಎಂದು ಹೇಳಿ
+ಇದೀಗ [place_name : grand rapids] mi ಮೈಯಲ್ಲಿ ಹವಾಮಾನ ಏನು ಮಾಡುತ್ತಿದೆ ಎಂದು ಹೇಳಿ
+ಇದೀಗ [place_name : grand rapids mi] ಮೈಯಲ್ಲಿ ಹವಾಮಾನ ಏನು ಮಾಡುತ್ತಿದೆ ಎಂದು ಹೇಳಿ
+
+brenden ನಾನು ಎಷ್ಟು ಫೋನ್ ನಂಬರ್ಸ್ ಹೊಂದಿದ್ದೇನೆ
+[person : brenden] ನಾನು ಎಷ್ಟು [personal_info : ಫೋನ್] ನಂಬರ್ಸ್ ಹೊಂದಿದ್ದೇನೆ
+[person : brenden] ನಾನು ಎಷ್ಟು [personal_info : ಫೋನ್ ನಂಬರ್ಸ್] ಹೊಂದಿದ್ದೇನೆ
+
+ಇಲ್ಲಿರುವ ಬೆಳಕನ್ನು redder ಮಾಡಿ
+ಇಲ್ಲಿರುವ ಬೆಳಕನ್ನು redder ಮಾಡಿ
+ಇಲ್ಲಿರುವ ಬೆಳಕನ್ನು [color_type : redder] ಮಾಡಿ
+
+ನಾನು i. b. m. ಮಾಡುತ್ತಿದ್ದೇನೆ ಹೇಗಿದ್ದೇನೆ
+ನಾನು i. b. m. ಮಾಡುತ್ತಿದ್ದೇನೆ ಹೇಗಿದ್ದೇನೆ
+ನಾನು [business_name : i. b. m.] ಮಾಡುತ್ತಿದ್ದೇನೆ ಹೇಗಿದ್ದೇನೆ
+
+classic hits ಟ್ಯೂನ್ ಮಾಡಿ
+[music_genre : classic] [music_descriptor : hits] ಟ್ಯೂನ್ ಮಾಡಿ
+[radio_name : classic hits] ಟ್ಯೂನ್ ಮಾಡಿ
+
+shelly ಯಾವುದಾದರೂ ಮೇಲ್ ಪರಿಶೀಲಿಸಿ
+shelly ಯಾವುದಾದರೂ ಮೇಲ್ ಪರಿಶೀಲಿಸಿ
+[person : shelly] ಯಾವುದಾದರೂ ಮೇಲ್ ಪರಿಶೀಲಿಸಿ
+
+ಇಂದು nj ಅಗ್ಗದ ವಿಮಾನ ದರಗಳ ಬಗ್ಗೆ ಹೇಳಿ
+[date : ಇಂದು] [currency_name : nj] ಅಗ್ಗದ ವಿಮಾನ ದರಗಳ ಬಗ್ಗೆ ಹೇಳಿ
+[date : ಇಂದು] [place_name : nj] ಅಗ್ಗದ ವಿಮಾನ ದರಗಳ ಬಗ್ಗೆ ಹೇಳಿ
+
+ನಾನು ಮತ್ತು ನಿಮಗಾಗಿ ತೆರೆದ parcheese game ಆಟ
+ನಾನು ಮತ್ತು ನಿಮಗಾಗಿ ತೆರೆದ [game_name : parcheese] game ಆಟ
+ನಾನು ಮತ್ತು ನಿಮಗಾಗಿ ತೆರೆದ [game_name : parcheese game] ಆಟ
+
+dorothy ನಮ್ಮ ವಿಚ್ಛೇದನದ ಬಗ್ಗೆ ನನ್ನೊಂದಿಗೆ ಮಾತನಾಡಬೇಕಾಗಿದೆ ನಾನು ಲಭ್ಯವಾದ ತಕ್ಷಣ ನೀವು ಸಭೆಯನ್ನು ಹೊಂದಿಸಬಹುದೇ
+[person : dorothy] ನಮ್ಮ ವಿಚ್ಛೇದನದ ಬಗ್ಗೆ ನನ್ನೊಂದಿಗೆ ಮಾತನಾಡಬೇಕಾಗಿದೆ ನಾನು ಲಭ್ಯವಾದ ತಕ್ಷಣ ನೀವು ಸಭೆಯನ್ನು ಹೊಂದಿಸಬಹುದೇ
+[person : dorothy] ನಮ್ಮ [event_name : ವಿಚ್ಛೇದನದ] ಬಗ್ಗೆ ನನ್ನೊಂದಿಗೆ ಮಾತನಾಡಬೇಕಾಗಿದೆ ನಾನು ಲಭ್ಯವಾದ ತಕ್ಷಣ ನೀವು [event_name : ಸಭೆಯನ್ನು] ಹೊಂದಿಸಬಹುದೇ
+
+ben's ಅವರ ಇಮೇಲ್ ಲಗತ್ತನ್ನು ಹೊಂದಿದೆಯೇ
+[person : ben's] ಅವರ ಇಮೇಲ್ [personal_info : ಲಗತ್ತನ್ನು] ಹೊಂದಿದೆಯೇ
+[person : ben's] ಅವರ ಇಮೇಲ್ ಲಗತ್ತನ್ನು ಹೊಂದಿದೆಯೇ
+
+new york ರೈಲು ಆಗಮನದ ಸಮಯವನ್ನು ಹೇಳಿ
+new [place_name : york] [transport_type : ರೈಲು] ಆಗಮನದ ಸಮಯವನ್ನು ಹೇಳಿ
+[place_name : new york] [transport_type : ರೈಲು] ಆಗಮನದ ಸಮಯವನ್ನು ಹೇಳಿ
+
+yelawolf ಮೂಲಕ ನಿನ್ನೆ ರಾಜಕುಮಾರ್ ಪ್ಲೇ ಮಾಡಿ
+[artist_name : yelawolf] ಮೂಲಕ [song_name : ನಿನ್ನೆ] [artist_name : ರಾಜಕುಮಾರ್] ಪ್ಲೇ ಮಾಡಿ
+[artist_name : yelawolf] ಮೂಲಕ [song_name : ನಿನ್ನೆ ರಾಜಕುಮಾರ್] ಪ್ಲೇ ಮಾಡಿ
+
+lady gaga ಅವರಿಂದ ನೀನಾದೆ ನಾ ಪ್ಲೇ ಮಾಡಿ
+[artist_name : lady gaga] ಅವರಿಂದ [song_name : ನೀನಾದೆ] ನಾ ಪ್ಲೇ ಮಾಡಿ
+[artist_name : lady gaga] ಅವರಿಂದ [song_name : ನೀನಾದೆ ನಾ] ಪ್ಲೇ ಮಾಡಿ
+
+red velvet cake ಆಗಿ ಏನು ಹೋಗುತ್ತದೆ
+[drink_type : red] [food_type : velvet cake] ಆಗಿ ಏನು ಹೋಗುತ್ತದೆ
+[food_type : red velvet cake] ಆಗಿ ಏನು ಹೋಗುತ್ತದೆ
+
+ben ಸಂಪರ್ಕದಲ್ಲಿದ್ದಾರೆ
+[person : ben] [personal_info : ಸಂಪರ್ಕದಲ್ಲಿದ್ದಾರೆ]
+[person : ben] ಸಂಪರ್ಕದಲ್ಲಿದ್ದಾರೆ
+
+ನಮಗೆ us ಯಾವಾಗ ಸ್ವಾತಂತ್ರ್ಯ ಸಿಕ್ಕಿತು
+ನಮಗೆ us ಯಾವಾಗ ಸ್ವಾತಂತ್ರ್ಯ ಸಿಕ್ಕಿತು
+ನಮಗೆ [place_name : us] ಯಾವಾಗ ಸ್ವಾತಂತ್ರ್ಯ ಸಿಕ್ಕಿತು
+
+tulsa ದಲ್ಲಿ ಯಾವ ಬಂದೂಕು ಪ್ರದರ್ಶನಗಳಿವೆ
+[place_name : tulsa] ದಲ್ಲಿ ಯಾವ [event_name : ಬಂದೂಕು ಪ್ರದರ್ಶನಗಳಿವೆ]
+[place_name : tulsa] ದಲ್ಲಿ ಯಾವ ಬಂದೂಕು [event_name : ಪ್ರದರ್ಶನಗಳಿವೆ]
+
+ಬಜೆಟ್ ಸಭೆಯ ಬಗ್ಗೆ karen ಇಮೇಲ್ ಮಾಡಿ
+ಬಜೆಟ್ [event_name : ಸಭೆಯ] ಬಗ್ಗೆ [person : karen] ಇಮೇಲ್ ಮಾಡಿ
+[event_name : ಬಜೆಟ್ ಸಭೆಯ] ಬಗ್ಗೆ [person : karen] ಇಮೇಲ್ ಮಾಡಿ
+
+ಇತ್ತೀಚಿನ trump controversy ಏನು
+ಇತ್ತೀಚಿನ [news_topic : trump] controversy ಏನು
+ಇತ್ತೀಚಿನ [news_topic : trump controversy] ಏನು
+
