@@ -25,13 +25,13 @@ def translate_utt(utt, annot_utt, idfs, translate_dict):
         return utt, annot_utt
 
     words_and_idfs.sort(key=lambda x: x[1], reverse=True)
-    top_word = words_and_idfs[0][0]
 
-    if top_word in translate_dict:
-        top_word_translation = translate_dict[top_word]
-        new_utt = utt.replace(top_word, top_word_translation)
-        new_annot_utt = annot_utt.replace(top_word, top_word_translation)
-        return new_utt, new_annot_utt
+    for word, idf in words_and_idfs:
+        if word in translate_dict:
+            word_translation = translate_dict[word]
+            new_utt = utt.replace(word, word_translation)
+            new_annot_utt = annot_utt.replace(word, word_translation)
+            return new_utt, new_annot_utt
     
     return utt, annot_utt
 

@@ -3,12 +3,12 @@ max_length: &max_length 512
 
 model:
   type: mt5 intent classification slot filling encoder only
-  checkpoint: /home/gurnoor/massive/massive/models/zeroshot_localization/checkpoint-17205
+  checkpoint: /home/gurnoor/massive/massive/models/baseline/checkpoint-17205
 
 tokenizer:
   type: mt5
   tok_args:
-    vocab_file: /home/gurnoor/massive/massive/models/zeroshot_localization/checkpoint-17205/spiece.model
+    vocab_file: /home/gurnoor/massive/massive/models/baseline/checkpoint-17205/spiece.model
     max_len: *max_length
 
 collator:
@@ -18,16 +18,16 @@ collator:
     padding: longest
 
 test:
-  test_dataset: /home/gurnoor/massive/massive/datasets/IN_ds/localization/.test
+  test_dataset: /home/gurnoor/massive/massive/datasets/IN_ds/code_switched_augmented/top_word_until_translated/.test
   intent_labels: /home/gurnoor/massive/massive/datasets/prepared-orig-dataset/.intents
   slot_labels: /home/gurnoor/massive/massive/datasets/prepared-orig-dataset/.slots
   massive_path: /home/gurnoor/massive/massive
-  # predictions_file: /home/gurnoor/massive/massive/test_out/code_switched_IN/predictions.json
+  predictions_file: /home/gurnoor/massive/massive/test_out/code_switched_augmentation_IN/top_word_until_translated/predictions.json
   slot_labels_ignore:
     - Other
   eval_metrics: all
   trainer_args:
-    output_dir: /home/gurnoor/massive/massive/test_out/zeroshot_localization
+    output_dir: /home/gurnoor/massive/massive/test_out/code_switched_augmentation_IN/top_word_until_translated
     per_device_eval_batch_size: 64
     eval_accumulation_steps: 4
     remove_unused_columns: false
@@ -35,5 +35,5 @@ test:
       - intent_num
       - slots_num
     logging_strategy: no
-    locale_eval_strategy: all and each
+    locale_eval_strategy: all only
     disable_tqdm: false

@@ -18,7 +18,7 @@ def get_translate_dict(src_lang='hi'):
 
 def main():
     translate_dict = get_translate_dict("hi")
-    print(translate_dict["पसंद"])
+    print(translate_dict["गुलाबी"])
 
 if __name__ == '__main__':
     main()
